@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import DataGrid, {
     Column,
     Editing,
@@ -9,10 +9,11 @@ import DataGrid, {
     Selection,
 } from "devextreme-react/data-grid";
 import { PencilIcon } from "@heroicons/react/24/solid";
-import { employees, states } from "../../data";
+import { employees, states, prefix } from "../../data";
 import "devextreme/dist/css/dx.light.css";
 
 const Employees = () => {
+    const [] = useState();
     return (
         <div className="w-full pt-10 flex justify-center items-center">
             <DataGrid
@@ -42,11 +43,17 @@ const Employees = () => {
                 />
 
                 <Column
-                    dataField="Prefix"
+                    dataField="PrefixID"
                     caption="Title"
                     width={70}
-                    allowEditing={false}
-                />
+                    // allowEditing={false}
+                >
+                    <Lookup
+                        dataSource={prefix}
+                        displayExpr="name"
+                        valueExpr="id"
+                    />
+                </Column>
                 <Column dataField="FirstName" />
                 <Column dataField="LastName" />
                 <Column dataField="Position" width={130} />
