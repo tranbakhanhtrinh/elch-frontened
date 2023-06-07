@@ -22,21 +22,11 @@ const Employees = () => {
                 allowColumnReordering={true}
                 showBorders={true}
                 showColumnLines={false}
+                // rowAlternationEnabled={true}
+                hoverStateEnabled={true}
                 width="50%"
-                // onEditingStart={onEditingStart}
-                // onInitNewRow={onInitNewRow}
-                // onRowInserting={onRowInserting}
-                // onRowInserted={onRowInserted}
-                // onRowUpdating={onRowUpdating}
-                // onRowUpdated={this.onRowUpdated}
-                // onRowRemoving={this.onRowRemoving}
-                // onRowRemoved={this.onRowRemoved}
-                // onSaving={this.onSaving}
-                // onSaved={this.onSaved}
-                // onEditCanceling={this.onEditCanceling}
-                // onEditCanceled={this.onEditCanceled}
             >
-                <Selection mode="multiple" />
+                {/* <Selection mode="multiple" /> */}
                 <Paging enabled={true} />
                 <SearchPanel
                     visible={true}
@@ -51,7 +41,12 @@ const Employees = () => {
                     useIcons={true}
                 />
 
-                <Column dataField="Prefix" caption="Title" width={70} />
+                <Column
+                    dataField="Prefix"
+                    caption="Title"
+                    width={70}
+                    allowEditing={false}
+                />
                 <Column dataField="FirstName" />
                 <Column dataField="LastName" />
                 <Column dataField="Position" width={130} />
