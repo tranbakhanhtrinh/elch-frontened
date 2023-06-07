@@ -13,7 +13,6 @@ import { employees, states, prefix } from "../../data";
 import "devextreme/dist/css/dx.light.css";
 
 const Employees = () => {
-    const [] = useState();
     return (
         <div className="w-full pt-10 flex justify-center items-center">
             <DataGrid
