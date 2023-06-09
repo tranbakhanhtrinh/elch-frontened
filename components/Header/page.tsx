@@ -7,10 +7,8 @@ const Header = () => {
     return (
         <header className="flex justify-between items-center w-full	bg-white shadow shadow-black-50 py-6 px-6">
             <h1 className="font-bold">LOGO</h1>
-            <DropDownListUser/> 
+            <DropDownListUser />
         </header>
-        
-        
     );
 };
 
