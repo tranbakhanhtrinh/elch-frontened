@@ -6,7 +6,9 @@ import DataGrid, {
     Paging,
     Lookup,
     SearchPanel,
+    FilterRow,
     Selection,
+    HeaderFilter
 } from "devextreme-react/data-grid";
 import { PencilIcon } from "@heroicons/react/24/solid";
 import { employees, states, prefix } from "../../data";
@@ -40,7 +42,7 @@ const Employees = () => {
                     allowAdding={true}
                     useIcons={true}
                 />
-
+                <HeaderFilter visible={true}/>
                 <Column
                     dataField="PrefixID"
                     caption="Title"
