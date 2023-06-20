@@ -1,4 +1,4 @@
-import Employees from "@/components/Employees/page";
+import Employees from "@/components/Employees/Employees";
 
 export default function Home() {
     return (
