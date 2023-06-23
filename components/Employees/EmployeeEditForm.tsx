@@ -1,5 +1,5 @@
 import React from "react";
-import "./edit_form_styles.css";
+import "./styles/edit_form_styles.css";
 
 
 interface EmployeeEditFormProps {
